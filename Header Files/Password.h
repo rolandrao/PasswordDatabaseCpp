@@ -20,9 +20,9 @@ public:
     epassword = "";
     eusername = "";
     ewebsite = "";
-    stringToCString(username,user,username.length(),&eusername);
-    stringToCString(password,pass,password.length(), &epassword);
-    stringToCString(website,web,website.length(), &ewebsite);
+    encrypt(username,user,username.length(),&eusername);
+    encrypt(password,pass,password.length(), &epassword);
+    encrypt(website,web,website.length(), &ewebsite);
 
     //encrypted = encrypt(password,&encrypted);
   }
@@ -37,17 +37,10 @@ public:
 
 
   }
-
-
-
-
-  ~Password(){
-
-  }
-
-  string getEncrypted(){
+  /*string getEncrypted(){
     return encrypted;
   }
+  */
 
   string getUser(){
     return username;

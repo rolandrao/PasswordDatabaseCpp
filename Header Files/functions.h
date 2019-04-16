@@ -5,6 +5,11 @@
 #include<stdlib.h>
 #include<string.h>
 
+using namespace std;
+void CStringToBinaryString(string*,char*,int);
+string charToBinaryString(char);
+
+
 void encrypt(string in, char *ptr, int size, string *s){ // takes in string to encrypt, address of cstring, size of cstring, address to put encrypted string
   strcpy(ptr,in.c_str());
   CStringToBinaryString(s,ptr,size); // takes in location of encyrpted string var, the converted cstring
